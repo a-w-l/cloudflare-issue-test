@@ -3,7 +3,7 @@ export const testURL = 'https://myaccount.economist.com/id/keys';
 const getResponseBody = async (): Promise<Response> => {
   const result = await fetch(testURL, {
     headers: { Accept: 'application/json' },
-  }).then((r) => r.json());
+  }).then((r) => r.text());
 
   const body = {
     message: 'request to worker successful',
